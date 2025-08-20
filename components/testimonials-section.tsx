@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                   <div
                     key={i}
-                    className="text-2xl text-[#f59e0b] animate-pulse"
+                    className="text-xl text-[#f59e0b] animate-pulse"
                     style={{ animationDelay: `${i * 100}ms` }}
                   >
                     ⭐
@@ -172,7 +172,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Testimonial Content */}
-              <blockquote className="text-xl md:text-2xl text-white/90 text-center mb-8 leading-relaxed italic">
+              <blockquote className="text-lg md:text-xl text-white/90 text-center mb-8 leading-relaxed italic">
                 "{testimonials[currentIndex].content}"
               </blockquote>
 

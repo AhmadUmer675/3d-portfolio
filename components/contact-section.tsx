@@ -241,40 +241,6 @@ export default function ContactSection() {
               </div>
             </Card>
 
-            {/* Social Links */}
-            <Card className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 border border-white/10 backdrop-blur-md p-6 hover:scale-105 transition-all duration-300">
-              <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="text-2xl">🌐</span>
-                Connect With Me
-              </h4>
-              <div className="grid grid-cols-2 gap-4">
-                <Button
-                  variant="outline"
-                  className="border-[#00d9ff]/30 text-[#00d9ff] hover:bg-[#00d9ff]/10 hover:border-[#00d9ff] transition-all duration-300 bg-transparent"
-                >
-                  LinkedIn
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#6366f1]/30 text-[#6366f1] hover:bg-[#6366f1]/10 hover:border-[#6366f1] transition-all duration-300 bg-transparent"
-                >
-                  GitHub
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#10b981]/30 text-[#10b981] hover:bg-[#10b981]/10 hover:border-[#10b981] transition-all duration-300 bg-transparent"
-                >
-                  Twitter
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#f59e0b]/30 text-[#f59e0b] hover:bg-[#f59e0b]/10 hover:border-[#f59e0b] transition-all duration-300 bg-transparent"
-                >
-                  Portfolio
-                </Button>
-              </div>
-            </Card>
-
             {/* Availability */}
             <Card className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 border border-white/10 backdrop-blur-md p-6 hover:scale-105 transition-all duration-300">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">

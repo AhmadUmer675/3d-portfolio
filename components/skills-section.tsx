@@ -12,18 +12,18 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: "React", level: 95, category: "Frontend", color: "#61dafb", icon: "⚛️" },
-  { name: "Node.js", level: 90, category: "Backend", color: "#10b981", icon: "🟢" },
+  { name: "React", level: 95, category: "Frontend", color: "#336791", icon: "⚛️" },
+  { name: "Node.js", level: 90, category: "Backend", color: "#336791", icon: "🟢" },
   { name: "PostgreSQL", level: 88, category: "Database", color: "#336791", icon: "🐘" },
-  { name: "Express.js", level: 92, category: "Backend", color: "#ffffff", icon: "🚀" },
-  { name: "JavaScript", level: 96, category: "Language", color: "#f7df1e", icon: "📜" },
-  { name: "TypeScript", level: 85, category: "Language", color: "#3178c6", icon: "🔷" },
-  { name: "Redux", level: 82, category: "Frontend", color: "#764abc", icon: "🔄" },
-  { name: "Tailwind CSS", level: 90, category: "Frontend", color: "#06b6d4", icon: "🎨" },
-  { name: "Next.js", level: 88, category: "Framework", color: "#000000", icon: "▲" },
-  { name: "AWS", level: 75, category: "Cloud", color: "#ff9900", icon: "☁️" },
-  { name: "Docker", level: 78, category: "DevOps", color: "#2496ed", icon: "🐳" },
-  { name: "Git", level: 92, category: "Tools", color: "#f05032", icon: "📝" },
+  { name: "Express.js", level: 92, category: "Backend", color: "#336791", icon: "🚀" },
+  { name: "JavaScript", level: 96, category: "Language", color: "#336791", icon: "📜" },
+  { name: "TypeScript", level: 85, category: "Language", color: "#336791", icon: "🔷" },
+  { name: "Redux", level: 82, category: "Frontend", color: "#336791", icon: "🔄" },
+  { name: "Tailwind CSS", level: 90, category: "Frontend", color: "#336791", icon: "🎨" },
+  { name: "Next.js", level: 88, category: "Framework", color: "#336791", icon: "▲" },
+  { name: "AWS", level: 75, category: "Cloud", color: "#336791", icon: "☁️" },
+  { name: "Docker", level: 78, category: "DevOps", color: "#336791", icon: "🐳" },
+  { name: "Git", level: 92, category: "Tools", color: "#336791", icon: "📝" },
 ]
 
 export default function SkillsSection() {
