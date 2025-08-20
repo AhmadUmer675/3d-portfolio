@@ -12,7 +12,7 @@ export default function Footer() {
             </div>
             <p className="text-white/70 leading-relaxed mb-4">
               Passionate about creating scalable, performant web applications using modern technologies. Specializing in
-              React, Node.js, MongoDB, and Express.js with 2+ years of professional experience.
+              ReactJs, NextJs , NodeJs, NestJs, MongoDB, Postgresql, and Express.js with 2+ years of professional experience.
             </p>
             <div className="flex gap-4">
               <div className="w-10 h-10 bg-[#00d9ff]/20 rounded-full flex items-center justify-center hover:bg-[#00d9ff]/30 transition-colors duration-300 cursor-pointer">

@@ -5,7 +5,7 @@ export default function AboutSection() {
   const stats = [
     { icon: Code, label: "Lines of Code", value: "500K+" },
     { icon: Coffee, label: "Cups of Coffee", value: "2,847" },
-    { icon: Globe, label: "Projects Deployed", value: "150+" },
+    { icon: Globe, label: "Projects Deployed", value: "15+" },
     { icon: Heart, label: "Happy Clients", value: "98%" },
   ];
 
@@ -33,7 +33,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="about" className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -65,22 +65,18 @@ export default function AboutSection() {
                 My Journey
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Started my coding journey 5 years ago with a simple "Hello
-                World" and never looked back. What began as curiosity evolved
-                into a passion for building scalable, user-centric applications
-                that solve real-world problems.
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Specialized in the MERN stack, I've had the privilege of working
-                with startups and enterprises, helping them transform ideas into
-                powerful digital solutions. My approach combines technical
-                excellence with creative problem-solving.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring the latest tech
-                trends, contributing to open-source projects, or experimenting
-                with new frameworks and tools that push the boundaries of web
-                development.
+                I’m a MERN Stack Developer with 2+ years of experience building
+                responsive and scalable applications. Skilled in React.js,
+                Next.js, Tailwind CSS, and modern JavaScript (ES6+), I craft
+                pixel-perfect, user-friendly interfaces. On the backend, I work
+                with Node.js, Express.js, and Postgresql to design secure APIs
+                and seamless integrations. My projects include e-commerce
+                platforms, school management systems, and agricultural
+                marketplaces, where I delivered full-stack solutions combining
+                clean design, performance, and reliability. Passionate about
+                learning and innovation, I continuously explore cloud
+                technologies, DevOps practices, and AI-driven tools to bring
+                modern, impactful solutions to life.
               </p>
             </div>
           </motion.div>
@@ -157,14 +153,14 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4 text-emerald-400">
+          <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-md border border-slate-700/40 rounded-2xl p-8 md:p-10 max-w-4xl mx-auto text-center shadow-lg hover:shadow-emerald-500/10 transition-all duration-500">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               My Philosophy
             </h3>
-            <p className="text-lg text-gray-300 leading-relaxed italic">
-              "Great code is not just about functionality—it's about creating
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed italic">
+              “Great code is not just about functionality — it’s about creating
               experiences that inspire, empower, and connect people. Every line
-              of code is an opportunity to make someone's day better."
+              of code is an opportunity to make someone’s day better.”
             </p>
           </div>
         </motion.div>
