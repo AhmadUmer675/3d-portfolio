@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 interface Project {
-  id: number
-  title: string
-  image: string
-  category: string
-  link: string
+  id: number;
+  title: string;
+  image: string;
+  category: string;
+  link: string;
 }
 
 const projects: Project[] = [
@@ -35,15 +35,17 @@ const projects: Project[] = [
     category: "Full Stack",
     link: "/viewprodct",
   },
-]
+];
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState("All")
+  const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Full Stack", "AI/ML"]
+  const categories = ["All", "Full Stack", "AI/ML"];
 
   const filteredProjects =
-    filter === "All" ? projects : projects.filter((project) => project.category === filter)
+    filter === "All"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   return (
     <section id="projects" className="py-20 px-6 relative overflow-hidden">
@@ -57,8 +59,8 @@ export default function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Showcasing innovative MERN stack applications with modern design patterns,
-            scalable architecture, and cutting-edge technologies.
+            Showcasing innovative MERN stack applications with modern design
+            patterns, scalable architecture, and cutting-edge technologies.
           </p>
         </div>
 
@@ -87,14 +89,16 @@ export default function ProjectsSection() {
               <Card className="group relative bg-gradient-to-br from-[#1a1a2e]/80 to-[#16213e]/80 border border-white/10 backdrop-blur-md overflow-hidden p-0 m-0">
                 {/* Project Image */}
                 <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
 
                 <div className="p-5 relative z-10">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-white">
+                      {project.title}
+                    </h3>
                     <span className="px-3 py-1 text-xs font-medium bg-[#6366f1]/20 text-[#6366f1] rounded-full border border-[#6366f1]/30">
                       {project.category}
                     </span>
@@ -112,5 +116,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
