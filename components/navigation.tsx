@@ -25,7 +25,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold bg-gradient-to-r from-[#00d9ff] to-[#6366f1] bg-clip-text text-transparent">
-            AhmadDev
+            <a href="#">AhmadDev</a>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -56,7 +56,7 @@ export default function Navigation() {
           </div>
 
           <Button className="bg-gradient-to-r from-[#00d9ff] to-[#6366f1] hover:from-[#00b8e6] hover:to-[#5855eb] text-white border-0">
-            Hire Me
+            <a href="#contact">Hire Me</a>
           </Button>
         </div>
       </div>

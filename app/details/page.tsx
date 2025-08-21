@@ -14,21 +14,17 @@ export default function ProductPage() {
     setIsLoaded(true);
   }, []);
 
-  const images = [
-    "/quantara.png",
-    "/quantara1.png",
-    "/quantara2.png",
-  ];
+  const images = ["/quantara.png", "/quantara1.png", "/quantara2.png"];
 
   const features = [
     "Natural language business process analysis",
     "AI-powered solution recommendations",
-    "Automated cost & ROI calculations", 
+    "Automated cost & ROI calculations",
     "Professional report generation & export",
     "Interactive timeline & milestone visualization",
     "Multi-tier subscription management",
     "Technology stack recommendations",
-    "Implementation roadmap creation"
+    "Implementation roadmap creation",
   ];
 
   const techStack = [
@@ -42,7 +38,7 @@ export default function ProductPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen">
       {/* Animated background particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -155,7 +151,7 @@ export default function ProductPage() {
             <div>
               <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent animate-gradient">
                 Quantis Bot
-                </h1>
+              </h1>
               <div className="flex items-center gap-2 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star

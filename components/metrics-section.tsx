@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Card } from "@/components/ui/card"
+import { useEffect, useRef, useState } from "react";
+import { Card } from "@/components/ui/card";
 
 interface Metric {
-  id: number
-  value: number
-  label: string
-  suffix: string
-  icon: string
-  color: string
-  description: string
+  id: number;
+  value: number;
+  label: string;
+  suffix: string;
+  icon: string;
+  color: string;
+  description: string;
 }
 
 const metrics: Metric[] = [
@@ -68,62 +68,67 @@ const metrics: Metric[] = [
     color: "#8b5cf6",
     description: "Maintaining high code quality standards",
   },
-]
+];
 
 export default function MetricsSection() {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: number]: number }>({})
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [animatedValues, setAnimatedValues] = useState<{
+    [key: number]: number;
+  }>({});
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isVisible) {
-            setIsVisible(true)
+            setIsVisible(true);
             // Animate each metric counter
             metrics.forEach((metric) => {
-              animateCounter(metric.id, metric.value)
-            })
+              animateCounter(metric.id, metric.value);
+            });
           }
-        })
+        });
       },
-      { threshold: 0.2 },
-    )
+      { threshold: 0.2 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [isVisible])
+    return () => observer.disconnect();
+  }, [isVisible]);
 
   const animateCounter = (id: number, targetValue: number) => {
-    const duration = 2000 // 2 seconds
-    const steps = 60
-    const increment = targetValue / steps
-    let currentValue = 0
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = targetValue / steps;
+    let currentValue = 0;
 
     const timer = setInterval(() => {
-      currentValue += increment
+      currentValue += increment;
       if (currentValue >= targetValue) {
-        currentValue = targetValue
-        clearInterval(timer)
+        currentValue = targetValue;
+        clearInterval(timer);
       }
-      setAnimatedValues((prev) => ({ ...prev, [id]: Math.floor(currentValue) }))
-    }, duration / steps)
-  }
+      setAnimatedValues((prev) => ({
+        ...prev,
+        [id]: Math.floor(currentValue),
+      }));
+    }, duration / steps);
+  };
 
   return (
-    <section 
-      id="metrics" 
-      ref={sectionRef} 
-      className="py-16 sm:py-20 px-4 sm:px-6 relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] via-[#1a1a2e] to-[#16213e]"
+    <section
+      id="metrics"
+      ref={sectionRef}
+      className="py-16 sm:py-20 px-4 sm:px-6 relative overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-purple-900/10 to-transparent"></div>
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,0.05)_50%,transparent_75%)]"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header - Fixed mobile padding */}
         <div className="text-center mb-10 sm:mb-16">
@@ -131,8 +136,8 @@ export default function MetricsSection() {
             Performance Metrics
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed px-2">
-            Numbers that speak for themselves - showcasing consistent delivery, quality, and client satisfaction in
-            every project.
+            Numbers that speak for themselves - showcasing consistent delivery,
+            quality, and client satisfaction in every project.
           </p>
         </div>
 
@@ -142,7 +147,9 @@ export default function MetricsSection() {
             <Card
               key={metric.id}
               className={`group relative bg-gradient-to-br from-[#1a1a2e]/90 to-[#16213e]/90 border border-white/10 backdrop-blur-md p-6 sm:p-8 text-center transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-lg hover:shadow-2xl ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -159,9 +166,9 @@ export default function MetricsSection() {
                 <div className="mb-3 sm:mb-4">
                   <div
                     className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 transition-all duration-300 group-hover:scale-110"
-                    style={{ 
-                      color: metric.color, 
-                      textShadow: `0 0 20px ${metric.color}40, 0 0 40px ${metric.color}20` 
+                    style={{
+                      color: metric.color,
+                      textShadow: `0 0 20px ${metric.color}40, 0 0 40px ${metric.color}20`,
                     }}
                   >
                     {animatedValues[metric.id] || 0}
@@ -173,7 +180,9 @@ export default function MetricsSection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-white/60 text-sm leading-relaxed mb-4">{metric.description}</p>
+                <p className="text-white/60 text-sm leading-relaxed mb-4">
+                  {metric.description}
+                </p>
 
                 {/* Animated Progress Bar */}
                 <div className="w-full bg-white/10 rounded-full h-1 overflow-hidden">
@@ -225,14 +234,14 @@ export default function MetricsSection() {
               { value: "40%", label: "Performance Boost", color: "#00d9ff" },
               { value: "95%", label: "On-Time Delivery", color: "#10b981" },
               { value: "20+", label: "Happy Clients", color: "#6366f1" },
-              { value: "24/7", label: "Support Available", color: "#f59e0b" }
+              { value: "24/7", label: "Support Available", color: "#f59e0b" },
             ].map((stat, index) => (
               <div key={index} className="text-center group cursor-pointer">
-                <div 
+                <div
                   className="text-2xl sm:text-3xl font-bold mb-2 transition-all duration-300 group-hover:scale-110"
-                  style={{ 
+                  style={{
                     color: stat.color,
-                    textShadow: `0 0 10px ${stat.color}40`
+                    textShadow: `0 0 10px ${stat.color}40`,
                   }}
                 >
                   {stat.value}
@@ -251,5 +260,5 @@ export default function MetricsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -17,11 +17,11 @@ export default function Portfolio() {
     <div className="min-h-screen text-white">
       <Navigation />
       <HeroSection />
-      <ProjectsSection />
-      <SkillsSection />
       <AboutSection />
+      <SkillsSection />
       <TimelineSection />
       <MetricsSection />
+      <ProjectsSection />
       <TestimonialsSection />
       {/* <BlogSection /> */}
       <ContactSection />

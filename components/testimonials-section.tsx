@@ -228,48 +228,6 @@ export default function TestimonialsSection() {
             />
           ))}
         </div>
-
-        {/* All Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={testimonial.id}
-              className={`bg-gradient-to-br from-[#1a1a2e]/60 to-[#16213e]/60 border border-white/10 backdrop-blur-md p-6 transition-all duration-700 hover:scale-105 hover:rotate-1 cursor-pointer ${
-                visibleTestimonials.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              } ${index === currentIndex ? "ring-2 ring-[#00d9ff]/50 shadow-lg shadow-[#00d9ff]/20" : ""}`}
-              onClick={() => goToTestimonial(index)}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              {/* Mini Stars */}
-              <div className="flex gap-1 mb-3">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="text-[#f59e0b] text-sm">
-                    ⭐
-                  </span>
-                ))}
-              </div>
-
-              {/* Mini Content */}
-              <p className="text-white/80 text-sm mb-4 line-clamp-3">{testimonial.content}</p>
-
-              {/* Mini Client Info */}
-              <div className="flex items-center gap-3">
-                <img
-                  src={testimonial.avatar || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="w-10 h-10 rounded-full border border-[#00d9ff]/30"
-                />
-                <div>
-                  <h5 className="text-white font-medium text-sm">{testimonial.name}</h5>
-                  <p className="text-white/60 text-xs">{testimonial.company}</p>
-                </div>
-              </div>
-
-              {/* Hover Glow */}
-              <div className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300 border border-[#00d9ff]/30 shadow-[0_0_20px_rgba(0,217,255,0.1)]"></div>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   )
